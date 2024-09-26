@@ -1,0 +1,35 @@
+#to-do-container {
+    position: absolute;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 40%;
+    background-color: rgb(212, 208, 208);
+    color: black;
+    border-radius: 10px;
+    top: 50%;      /*chatgpt's help*/
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+#add-bar {
+    height: 30px;
+    width: 65%;
+}
+#add-btn {
+    height: 30px;
+    width: 25%;
+    color: blueviolet;
+    /* background-color: rgb(255, 246, 246); */
+}
+#add-bar, #add-btn {
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: none;
+}
+.to-do {
+    text-align: center;
+    color: blueviolet;
+}
+
+
