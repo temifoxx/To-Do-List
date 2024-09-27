@@ -6,30 +6,100 @@
     height: 500px;
     width: 40%;
     background-color: rgb(212, 208, 208);
+    /* background: linear-gradient(105deg, rgb(0, 0, 0), blue); */
     color: black;
     border-radius: 10px;
     top: 50%;      /*chatgpt's help*/
     left: 50%; 
     transform: translate(-50%, -50%);
 }
+
 #add-bar {
     height: 30px;
     width: 65%;
 }
+
 #add-btn {
     height: 30px;
     width: 25%;
     color: blueviolet;
     /* background-color: rgb(255, 246, 246); */
 }
+
 #add-bar, #add-btn {
     border-radius: 5px;
     border-width: 1px;
     border-style: none;
 }
+
 .to-do {
     text-align: center;
     color: blueviolet;
 }
 
+.delete-button {
+    color: rgb(212, 208, 208);
+    background-color: blueviolet;
+    height: 30px;
+    width: auto;
+    margin-left: 10px;
+    border-width: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* chat help */
+.list-container {
+    max-height: 300px; /* Set the max height according to your design */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    
+}
+
+li {
+    text-decoration: none;
+    margin-top: 7px;
+}
+
+input[type="checkbox"]:checked + li {
+    text-decoration: line-through;
+}
+
+
+
+
+/* Responsiveness learnt this night */
+.container {
+    width: 80%;
+    margin: 0, auto;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .delete-button {
+        margin-top: 7px;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+    .container {
+        width: 100%;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    .delete-button {
+        margin-left: 10px;
+    }
+
+}
 

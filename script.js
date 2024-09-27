@@ -15,15 +15,28 @@ function addTask() {
     listItem.append(taskText);
     taskList.appendChild(listItem);
     
-    taskInput.value = '';
+    //this should return an empty input upon adding new task to the list
+    taskInput.value = '';  
+
 
     const listItemCheckbox = document.createElement('input');
     listItemCheckbox.type = 'checkbox';
     listItem.append(listItemCheckbox);
-    // console.log(listItemCheckbox);
+    console.log(listItemCheckbox);
 
+    listItemCheckbox.addEventListener('change', function() {
+        if(this.checked) {
+            listItem.style.textDecoration = "line-through";
+        }
+        else {
+            listItem.style.textDecoration = "none";
+        }
+    });
+    
 
     const deleteBtn = document.createElement("button")
+    deleteBtn.className = 'delete-button';
+    console.log('button created')
     deleteBtn.textContent = 'Delete';
     listItem.append(deleteBtn);
     console.log (listItem)
